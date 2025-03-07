@@ -7,12 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Marvel Multiverse RPG!</h1>
-    <p>Prepare to create your own hero and begin your adventure!</p>
+    <h1>Marvel D616 RPG - Create Your Hero</h1>
+    
+    <form id="characterForm">
+        <label for="heroName">Hero Name:</label>
+        <input type="text" id="heroName" required><br><br>
 
-    <button onclick="startGame()">Start Game</button>
+        <label for="heroType">Hero Type:</label>
+        <select id="heroType">
+            <option value="Mutant">Mutant</option>
+            <option value="Tech">Tech</option>
+            <option value="Mystic">Mystic</option>
+            <option value="Super Soldier">Super Soldier</option>
+        </select><br><br>
 
-    <div id="gameOutput"></div>
+        <button type="button" onclick="createCharacter()">Create Hero</button>
+    </form>
+
+    <div id="characterOutput"></div>
 
     <script src="script.js"></script>
 </body>
